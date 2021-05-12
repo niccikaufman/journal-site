@@ -5,7 +5,7 @@ export class Entry {
     this.body = body;
   }
   wordCount() {
-    let wordCount = 0;
+    let wordCount = 1;
     for (let i = 0; i <= this.body.length; i++) {
       if (this.body.charAt(i) == ' ') {
         wordCount++;
