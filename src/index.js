@@ -26,12 +26,12 @@ export class Entry {
     }
     console.log(vowelCount, consonantCount);
   }
+  //return the first sentence of the entry.
+  getTeaser(){
+    let sentence = this.body.split(".");
+    console.log(sentence[0]);
+  }
 }
-//   consonantCount(body){
 
-//   }
-//   //return the first sentence of the entry. If the sentence is over 8 words, only display those first 8 words.
-//   getTeaser(body){
 
-//   }
-// }
+
