@@ -14,8 +14,13 @@ $(document).ready(function() {
     entry.wordCount();
     entry.vowelAndConsonantCount();
     entry.getTeaser();
-    $('#posted-entry').show();
-    $('#posted-entry-title').append(entry.title);
+    $('#teaser-info').show();
+    $('#teaser-title').append(entry.title);
     $('#posted-entry-body').append("<p>" + entry.body + "</p>");
+
+  });
+  $('#teaser-link').click(function(){
+    $('#teaser-info').show();
+    $('#posted-entry-body').toggle();
   });
 });
