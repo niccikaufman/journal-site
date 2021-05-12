@@ -14,21 +14,19 @@ export class Entry {
     console.log(wordCount);
   }
   vowelCount(){
-    var vowels = 'aeiouAEIOU';
-    var vowelCount = 0;
+    let vowels = 'aeiouAEIOU';
+    let vowelCount = 0;
+    let consonantCount = 0;
     for(var i = 0; i < this.body.length ; i++) {
-      if (vowels.indexOf(this.body[i]) !== -1)
-      {
+      if (vowels.indexOf(this.body[i]) !== -1) {
         vowelCount++;
+      } else {
+        consonantCount++;
       }
     }
-    console.log(vowelCount);
+    console.log(vowelCount, consonantCount);
   }
 }
-
-//   vowelCount(body) {
-
-//   }
 //   consonantCount(body){
 
 //   }
