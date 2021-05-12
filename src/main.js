@@ -14,7 +14,8 @@ $(document).ready(function() {
     entry.wordCount();
     entry.vowelAndConsonantCount();
     entry.getTeaser();
-    $('#posted-entry-title').append("<p>" + entry.title + "</p>");
+    $('#posted-entry').show();
+    $('#posted-entry-title').append(entry.title);
     $('#posted-entry-body').append("<p>" + entry.body + "</p>");
   });
 });
