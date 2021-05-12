@@ -11,7 +11,7 @@ $(document).ready(function() {
     const title = $('#entry-title').val();
     const body = $('#entry-body').val();
     let entry = new Entry(title,body);
-    console.log(entry);
+    entry.wordCount();
     $('#posted-entry-title').append("<p>" + entry.title + "</p>");
     $('#posted-entry-body').append("<p>" + entry.body + "</p>");
   });
