@@ -12,7 +12,7 @@ $(document).ready(function() {
     const body = $('#entry-body').val();
     let entry = new Entry(title,body);
     entry.wordCount();
-    entry.vowelCount();
+    entry.vowelAndConsonantCount();
     $('#posted-entry-title').append("<p>" + entry.title + "</p>");
     $('#posted-entry-body').append("<p>" + entry.body + "</p>");
   });

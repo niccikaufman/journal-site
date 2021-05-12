@@ -13,7 +13,7 @@ export class Entry {
     }
     console.log(wordCount);
   }
-  vowelCount(){
+  vowelAndConsonantCount(){
     let vowels = 'aeiouAEIOU';
     let vowelCount = 0;
     let consonantCount = 0;
