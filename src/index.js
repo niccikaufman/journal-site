@@ -13,6 +13,17 @@ export class Entry {
     }
     console.log(wordCount);
   }
+  vowelCount(){
+    var vowels = 'aeiouAEIOU';
+    var vowelCount = 0;
+    for(var i = 0; i < this.body.length ; i++) {
+      if (vowels.indexOf(this.body[i]) !== -1)
+      {
+        vowelCount++;
+      }
+    }
+    console.log(vowelCount);
+  }
 }
 
 //   vowelCount(body) {
