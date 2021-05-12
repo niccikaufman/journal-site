@@ -13,6 +13,7 @@ $(document).ready(function() {
     let entry = new Entry(title,body);
     entry.wordCount();
     entry.vowelAndConsonantCount();
+    entry.getTeaser();
     $('#posted-entry-title').append("<p>" + entry.title + "</p>");
     $('#posted-entry-body').append("<p>" + entry.body + "</p>");
   });
