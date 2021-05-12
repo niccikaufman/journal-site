@@ -5,14 +5,17 @@
 body {
   background-color: aquamarine;
 }
+#posted-entry-body {
+  display: none;
+}
 
-#posted-entry {
+#teaser-info {
   display: none;
   max-width: 50%;
   padding: 5pt;
 }
 
-#posted-entry-title {
+#teaser-title {
   text-align: center;
   text-decoration: underline;
   font-size: 20px;
