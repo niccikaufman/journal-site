@@ -4,10 +4,17 @@ export class Entry {
     this.title = title;
     this.body = body;
   }
+  wordCount() {
+    let wordCount = 0;
+    for (let i = 0; i <= this.body.length; i++) {
+      if (this.body.charAt(i) == ' ') {
+        wordCount++;
+      }
+    }
+    console.log(wordCount);
+  }
 }
-//   wordCount(body) {
 
-//   }
 //   vowelCount(body) {
 
 //   }
