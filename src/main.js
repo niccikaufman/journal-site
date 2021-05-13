@@ -15,9 +15,8 @@ $(document).ready(function() {
     entry.vowelAndConsonantCount();
     entry.getTeaser();
     $('#teaser-info').show();
-    $('#teaser-title').append(entry.title);
-    $('#posted-entry-body').append("<p>" + entry.body + "</p>");
-
+    $('#teaser-title').append('<p class="card">' + entry.title + '</p>');
+    $('#posted-entry-body').append('<p class="card">' + entry.body + '</p>');
   });
   $('#teaser-link').click(function(){
     $('#teaser-info').show();
