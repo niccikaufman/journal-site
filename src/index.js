@@ -11,7 +11,7 @@ export class Entry {
         wordCount++;
       }
     }
-    console.log(wordCount);
+    return wordCount;
   }
   vowelAndConsonantCount(){
     let vowels = 'aeiouAEIOU';
@@ -24,12 +24,12 @@ export class Entry {
         consonantCount++;
       }
     }
-    console.log(vowelCount, consonantCount);
+    return vowelCount, consonantCount;
   }
   //return the first sentence of the entry.
   getTeaser(){
     let sentence = this.body.split(".");
-    console.log(sentence[0]);
+    return sentence[0];
   }
 }
 
