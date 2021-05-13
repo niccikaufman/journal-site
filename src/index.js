@@ -1,8 +1,9 @@
 //back end logic
 export class Entry {
-  constructor(title,body) {
+  constructor(title,body,teaser) {
     this.title = title;
     this.body = body;
+    this.teaser = teaser;
   }
   wordCount() {
     let wordCount = 1;
@@ -29,7 +30,8 @@ export class Entry {
   //return the first sentence of the entry.
   getTeaser(){
     let sentence = this.body.split(".");
-    return sentence[0];
+    this.teaser = sentence[0];
+    return this.teaser;
   }
 }
 
