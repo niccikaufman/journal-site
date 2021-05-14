@@ -4,20 +4,25 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import { Entry } from "./index.js";
+var entry;
+
+function createTeaser() {
+  $('#teaser-title').append('<p class="card">' + entry.title.toUpperCase() + '</p>');
+  $('#teaser').append('<p>' + entry.teaser + ' . . . </p><br>');
+  $('#posted-entry-body').append('<p>' + entry.body + '</p>');
+}
 
 $(document).ready(function() {
   $('#create-entry').click(function(event){
     event.preventDefault();
     const title = $('#entry-title').val();
     const body = $('#entry-body').val();
-    let entry = new Entry(title,body);
+    entry = new Entry(title,body);
     entry.wordCount();
     entry.vowelAndConsonantCount();
     entry.getTeaser();
     $('#teaser-info').show(); 
-    $('#teaser-title').append('<p class="card">' + entry.title.toUpperCase() + '</p>');
-    $('#teaser').append('<p>' + entry.teaser + ' . . . </p><br>');
-    $('#posted-entry-body').append('<p>' + entry.body + '</p>');
+    createTeaser();
   });
   $('#teaser-link').click(function(){
     $('#teaser-info').show();
@@ -25,3 +30,5 @@ $(document).ready(function() {
     $('#posted-entry-body').toggle();
   });
 });
+
+
