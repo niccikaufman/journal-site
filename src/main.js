@@ -14,8 +14,9 @@ $(document).ready(function() {
     entry.wordCount();
     entry.vowelAndConsonantCount();
     entry.getTeaser();
-    $('#teaser-info').show();
-    $('#teaser-title').append('<p class="card">' + entry.title + '<br>' + entry.teaser + '</p>');
+    $('#teaser-info').show(); 
+    $('#teaser-title').append('<p class="card">' + entry.title.toUpperCase() + '</p>');
+    $('#teaser').append('<p>' + entry.teaser + ' . . . </p>');
     $('#posted-entry-body').append('<p class="card">' + entry.body + '</p>');
   });
   $('#teaser-link').click(function(){
