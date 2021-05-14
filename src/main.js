@@ -16,8 +16,8 @@ $(document).ready(function() {
     entry.getTeaser();
     $('#teaser-info').show(); 
     $('#teaser-title').append('<p class="card">' + entry.title.toUpperCase() + '</p>');
-    $('#teaser').append('<p>' + entry.teaser + ' . . . </p>');
-    $('#posted-entry-body').append('<p class="card">' + entry.body + '</p>');
+    $('#teaser').append('<p>' + entry.teaser + ' . . . </p><br>');
+    $('#posted-entry-body').append('<p>' + entry.body + '</p>');
   });
   $('#teaser-link').click(function(){
     $('#teaser-info').show();
