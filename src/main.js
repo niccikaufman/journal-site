@@ -21,6 +21,7 @@ $(document).ready(function() {
   });
   $('#teaser-link').click(function(){
     $('#teaser-info').show();
+    $('#teaser').toggle();
     $('#posted-entry-body').toggle();
   });
 });
