@@ -12,12 +12,12 @@ button {
   justify-content: center;
 }
 
-
 body {
-  background-color: aquamarine;
+  background-color: #7fffd4;
 }
-#entry-area {
+#entry-area{
   align-self: center;
+  box-shadow: -18px -20px 12px 0px #55a78b, -21px -20px 39px #73e1bd
 }
 #posted-entry-body {
   display: none;
