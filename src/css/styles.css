@@ -2,20 +2,37 @@
   line-height: 2em;
 }
 
+.container {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+}
+
+button {
+  align-self: center;
+}
+
 body {
   background-color: aquamarine;
 }
+
+#entry-area {
+  align-self: center;
+}
+
 #posted-entry-body {
   display: none;
 }
 
 #teaser-info {
+  align-self: center;
   display: none;
   max-width: 50%;
   padding: 5pt;
 }
 
-#teaser-title {
+#teaser-title,
+h1 {
   text-align: center;
   text-decoration: underline;
   font-size: 20px;
