@@ -1,11 +1,7 @@
 #entry-body {
   line-height: 2em;
 }
-.container {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-}
+
 button {
   align-self: center;
 }
