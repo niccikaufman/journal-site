@@ -1,9 +1,5 @@
-#entry-body {
-  line-height: 2em;
-}
-
-button {
-  align-self: center;
+body {
+  background-color: #7fffd4;
 }
 
 .container {
@@ -12,15 +8,25 @@ button {
   justify-content: center;
 }
 
-body {
-  background-color: #7fffd4;
-}
-#entry-area{
+button {
   align-self: center;
-  box-shadow: -18px -20px 12px 0px #55a78b, -21px -20px 39px #73e1bd
 }
-#posted-entry-body {
-  display: none;
+
+textarea,
+input,
+.btn-light,
+.btn-light:hover {
+  background-color: rgb(250, 206, 124);
+  border: solid palegoldenrod;
+}
+
+#entry-area {
+  align-self: center;
+  box-shadow: -18px -20px 12px 0px #55a78b, -21px -20px 39px #73e1bd;
+}
+
+#entry-title {
+  margin-bottom: 2px;
 }
 
 #teaser-info {
@@ -35,4 +41,8 @@ h1 {
   text-align: center;
   text-decoration: underline;
   font-size: 20px;
+}
+
+#posted-entry-body {
+  display: none;
 }
