@@ -1,6 +1,14 @@
 #entry-body {
   line-height: 2em;
 }
+.container {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+}
+button {
+  align-self: center;
+}
 
 .container {
   display: flex;
@@ -8,18 +16,13 @@
   justify-content: center;
 }
 
-button {
-  align-self: center;
-}
 
 body {
   background-color: aquamarine;
 }
-
 #entry-area {
   align-self: center;
 }
-
 #posted-entry-body {
   display: none;
 }
