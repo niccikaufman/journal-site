@@ -11,16 +11,13 @@
       <h1>Journal Site</h1>
       <br>
       <br>
-      <section id="entry-area">
+      <section id="entry-area" class="card">
         <input id="entry-title" placeholder="Title" size="51">
-        <br>
         <textarea id="entry-body" placeholder="Body" rows="10" cols="50"></textarea>
+        <button type="submit" id="create-entry" class="btn-light">Create Entry</button> 
       </section>
-      <button type="submit" id="create-entry" class="btn-light">Create Entry</button>
-      <div id="teaser-info" class="card">
-        <a href="#" id="teaser-link"><p id="teaser-title"></p></a>
-        <blockquote id="teaser"></blockquote>
-        <section id="posted-entry-body"></section>
+      <div class="teaser-section">
+        <p class="entry-card"></p>
       </div>
     </div>
   </body>
