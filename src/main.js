@@ -9,10 +9,10 @@ var entry;
 function createTeaser() {
   let teaserSection = document.createElement("div");
   teaserSection.className = 'teaser-section';
-  teaserSection.innerHTML = '<p class="teaser-link teaser-title card"></p><br><blockquote class="teaser card"></blockquote><br><p class="entry-card"></p>'
+  teaserSection.innerHTML = '<p class="teaser-title card"></p><p class="entry-card"></p>'
   $('.container').append(teaserSection);
-  $('.teaser-title').text(entry.title);
-  $('.teaser').text(entry.teaser);
+  $('.teaser-title').text(entry.title.toUpperCase());
+  // $('.teaser').text(entry.teaser + ' ...');
   $('.entry-card').text(entry.body);
 }
 
@@ -26,13 +26,13 @@ $(document).ready(function() {
     entry.vowelAndConsonantCount();
     entry.getTeaser();
     createTeaser();
-    $('.teaser-section').show(); 
-    $('.teaser').show();
+    // $('.teaser-section').show(); 
+    // $('.entry-card').show();
   });
-  $('.teaser-section').on("click",function(){
-    $('.teaser').toggle();
-    $('.entry-card').toggle();
-  });
+  // $('.teaser').on("hover",function(){
+  //   $('.teaser').hide();
+  //   $('.entry-card').show();
+  // });
 });
 
 
