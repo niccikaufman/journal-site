@@ -6,7 +6,7 @@ import './css/styles.css';
 import { Entry } from "./index.js";
 var entry;
 
-function createTeaser() {
+function createEntryCard() {
   let teaserSection = document.createElement("div");
   teaserSection.className = 'teaser-section';
   teaserSection.innerHTML = '<p class="teaser-title card"></p><p class="entry-card"></p>'
@@ -25,7 +25,7 @@ $(document).ready(function() {
     entry.wordCount();
     entry.vowelAndConsonantCount();
     entry.getTeaser();
-    createTeaser();
+    createEntryCard();
     // $('.teaser-section').show(); 
     // $('.entry-card').show();
   });
