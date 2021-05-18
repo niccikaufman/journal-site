@@ -13,7 +13,7 @@ function createTeaser() {
 }
 
 $(document).ready(function() {
-  $('#create-entry').click(function(event){
+  $('#create-entry').on("click",function(event){
     event.preventDefault();
     const title = $('#entry-title').val();
     const body = $('#entry-body').val();
@@ -25,9 +25,9 @@ $(document).ready(function() {
     $('.teaser-section').show(); 
     $('.teaser').show();
   });
-  $('.teaser-card').click(function(){
+  $('.teaser-card').on("click",function(){
     $('.teaser').hide();
-    // $('.entry-card').toggle();
+    $('.entry-card').toggle();
   });
 });
 
