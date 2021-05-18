@@ -7,8 +7,13 @@ import { Entry } from "./index.js";
 var entry;
 
 function createTeaser() {
-  $('.teaser-section').prepend('<p class="teaser-card card"><a href="#" class="teaser-link teaser-title card">' + entry.title.toUpperCase() + '</a>');
-  $('.teaser-section').append('<blockquote class="teaser">' + entry.teaser + ' . . . </blockquote><br>'); 
+  let teaserSection = document.createElement("div");
+  teaserSection.className = 'teaser-section';
+  teaserSection.innerHTML = '<p class="teaser-link teaser-title card"></p><br><blockquote class="teaser card"></blockquote><br><p class="entry-card"></p>'
+  $('.container').append(teaserSection);
+  $('.teaser-title').text(entry.title);
+  $('.teaser').text(entry.teaser);
+  $('.entry-card').text(entry.body);
 }
 
 $(document).ready(function() {
@@ -17,7 +22,6 @@ $(document).ready(function() {
     const title = $('#entry-title').val();
     const body = $('#entry-body').val();
     entry = new Entry(title,body);
-    $('.entry-card').append(entry.body);
     entry.wordCount();
     entry.vowelAndConsonantCount();
     entry.getTeaser();
