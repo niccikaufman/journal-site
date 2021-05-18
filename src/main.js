@@ -9,7 +9,6 @@ var entry;
 function createTeaser() {
   $('.teaser-section').prepend('<p class="teaser-card card"><a href="#" class="teaser-link teaser-title card">' + entry.title.toUpperCase() + '</a>');
   $('.teaser-section').append('<blockquote class="teaser">' + entry.teaser + ' . . . </blockquote><br>'); 
-  $('.entry-card').append(entry.body);
 }
 
 $(document).ready(function() {
@@ -25,9 +24,10 @@ $(document).ready(function() {
     $('.teaser-section').show(); 
     $('.teaser').show();
   });
-  $('.teaser-card').on("click",function(){
-    $('.teaser').hide();
+  $('.teaser-section').on("click",function(){
+    $('.teaser').toggle();
     $('.entry-card').toggle();
+    $('.entry-card').append(entry.body);
   });
 });
 
