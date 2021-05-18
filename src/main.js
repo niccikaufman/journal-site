@@ -7,9 +7,9 @@ import { Entry } from "./index.js";
 var entry;
 
 function createTeaser() {
-  $('#teaser-title').append('<p class="card">' + entry.title.toUpperCase() + '</p>');
-  $('#teaser').append('<p>' + entry.teaser + ' . . . </p><br>');
-  $('#posted-entry-body').append('<p>' + entry.body + '</p>');
+  $('.teaser-section').prepend('<p class="teaser-card card"><a href="#" class="teaser-link teaser-title card">' + entry.title.toUpperCase() + '</a>');
+  $('.teaser-section').append('<blockquote class="teaser">' + entry.teaser + ' . . . </blockquote><br>'); 
+  $('.entry-card').append(entry.body);
 }
 
 $(document).ready(function() {
@@ -21,13 +21,13 @@ $(document).ready(function() {
     entry.wordCount();
     entry.vowelAndConsonantCount();
     entry.getTeaser();
-    $('#teaser-info').show(); 
     createTeaser();
+    $('.teaser-section').show(); 
+    $('.teaser').show();
   });
-  $('#teaser-link').click(function(){
-    $('#teaser-info').show();
-    $('#teaser').toggle();
-    $('#posted-entry-body').toggle();
+  $('.teaser-card').click(function(){
+    $('.teaser').hide();
+    // $('.entry-card').toggle();
   });
 });
 
