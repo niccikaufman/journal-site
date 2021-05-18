@@ -8,6 +8,10 @@ body {
   justify-content: center;
 }
 
+#entry-area {
+  align-self: center;
+}
+
 button {
   align-self: center;
 }
@@ -22,7 +26,6 @@ input,
 
 #entry-area,
 .teaser-section {
-  align-self: center;
   box-shadow: -18px -20px 12px 0px #55a78b, -21px -20px 39px #73e1bd;
   background-color: palegoldenrod;
 }
@@ -32,25 +35,26 @@ input,
 }
 
 .teaser-section {
-  display: none;
-  max-width: 50%;
+  align-self: flex-end;
+  max-width: auto;
   padding: 10px;
   margin: 30px;
   background-color: rgb(250, 206, 124);
 }
 
-.teaser-link,
+.teaser-title,
 h1 {
+  align-self: center;
   text-align: center;
   text-decoration: underline;
   font-size: 20px;
   color: black;
 }
 
-.entry-card,
+/* .entry-card,
 .teaser {
   display: none;
-}
+} */
 
 .teaser-title {
   background-color: palegoldenrod;

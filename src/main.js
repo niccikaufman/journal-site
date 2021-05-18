@@ -7,13 +7,17 @@ import { Entry } from "./index.js";
 var entry;
 
 function createTeaser() {
-  $('.teaser-section').prepend('<p class="teaser-card card"><a href="#" class="teaser-link teaser-title card">' + entry.title.toUpperCase() + '</a>');
-  $('.teaser-section').append('<blockquote class="teaser">' + entry.teaser + ' . . . </blockquote><br>'); 
-  $('.entry-card').append(entry.body);
+  let teaserSection = document.createElement("div");
+  teaserSection.className = 'teaser-section';
+  teaserSection.innerHTML = '<p class="teaser-link teaser-title card"></p><br><blockquote class="teaser card"></blockquote><br><p class="entry-card"></p>'
+  $('.container').append(teaserSection);
+  $('.teaser-title').text(entry.title);
+  $('.teaser').text(entry.teaser);
+  $('.entry-card').text(entry.body);
 }
 
 $(document).ready(function() {
-  $('#create-entry').click(function(event){
+  $('#create-entry').on("click",function(event){
     event.preventDefault();
     const title = $('#entry-title').val();
     const body = $('#entry-body').val();
@@ -25,9 +29,9 @@ $(document).ready(function() {
     $('.teaser-section').show(); 
     $('.teaser').show();
   });
-  $('.teaser-card').click(function(){
-    $('.teaser').hide();
-    // $('.entry-card').toggle();
+  $('.teaser-section').on("click",function(){
+    $('.teaser').toggle();
+    $('.entry-card').toggle();
   });
 });
 
