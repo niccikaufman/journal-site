@@ -17,6 +17,7 @@ $(document).ready(function() {
     const title = $('#entry-title').val();
     const body = $('#entry-body').val();
     entry = new Entry(title,body);
+    $('.entry-card').append(entry.body);
     entry.wordCount();
     entry.vowelAndConsonantCount();
     entry.getTeaser();
@@ -27,7 +28,6 @@ $(document).ready(function() {
   $('.teaser-section').on("click",function(){
     $('.teaser').toggle();
     $('.entry-card').toggle();
-    $('.entry-card').append(entry.body);
   });
 });
 
