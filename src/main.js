@@ -5,11 +5,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import { Entry } from "./index.js";
 var entry;
+let id = 1;
+var entryList = [];
 
 function createEntryCard() {
   let teaserSection = document.createElement("div");
   teaserSection.className = 'teaser-section';
-  teaserSection.innerHTML = '<p class="teaser-title card"></p><p class="entry-card"></p>'
+  teaserSection.innerHTML = '<p class="teaser-title card"></p><p class="entry-card"></p>';
   $('.container').append(teaserSection);
   $('.teaser-title').text(entry.title.toUpperCase());
   // $('.teaser').text(entry.teaser + ' ...');
@@ -21,11 +23,14 @@ $(document).ready(function() {
     event.preventDefault();
     const title = $('#entry-title').val();
     const body = $('#entry-body').val();
-    entry = new Entry(title,body);
-    entry.wordCount();
-    entry.vowelAndConsonantCount();
+    entry = new Entry(title,body,id);
+    entryList.push(entry);
+    entry.id = id++;
+    console.log(entry.id, entryList);
     entry.getTeaser();
     createEntryCard();
+    // entry.wordCount();
+    // addWordCount();
     // $('.teaser-section').show(); 
     // $('.entry-card').show();
   });
