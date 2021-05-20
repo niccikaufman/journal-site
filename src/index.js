@@ -1,9 +1,10 @@
 //back end logic
 export class Entry {
-  constructor(title,body,teaser) {
+  constructor(title,body,teaser,id) {
     this.title = title;
     this.body = body;
     this.teaser = teaser;
+    this.id = id;
   }
   wordCount() {
     let wordCount = 1;
