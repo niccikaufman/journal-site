@@ -11,11 +11,13 @@ var entryList = [];
 function createEntryCard() {
   let teaserSection = document.createElement("div");
   teaserSection.className = 'teaser-section';
-  teaserSection.innerHTML = '<p class="teaser-title card"></p><p class="entry-card"></p>';
+  teaserSection.innerHTML = `<p class="${entry.id} teaser-title card"></p><p class="entry-card" id="${entry.id}"></p>`;
   $('.container').append(teaserSection);
-  $('.teaser-title').text(entry.title.toUpperCase());
-  // $('.teaser').text(entry.teaser + ' ...');
-  $('.entry-card').text(entry.body);
+  entryList.forEach(element => {
+    $(`.${element.id}`).text(element.title.toUpperCase());
+    // $('.teaser').text(entry.teaser + ' ...');
+    $(`#${element.id}`).text(element.body);
+  });
 }
 
 $(document).ready(function() {
@@ -27,17 +29,9 @@ $(document).ready(function() {
     entryList.push(entry);
     entry.id = id++;
     console.log(entry.id, entryList);
-    entry.getTeaser();
     createEntryCard();
-    // entry.wordCount();
-    // addWordCount();
-    // $('.teaser-section').show(); 
-    // $('.entry-card').show();
+    $('.teaser-section').show();
   });
-  // $('.teaser').on("hover",function(){
-  //   $('.teaser').hide();
-  //   $('.entry-card').show();
-  // });
 });
 
 
